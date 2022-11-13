@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://mingwangdianxia.github.io/categories/</loc><lastmod>2022-11-13T20:26:23&#43;08:00</lastmod><xhtml:link
+            <loc>https://mingwangdianxia.github.io/categories/</loc><lastmod>2022-11-13T22:02:42&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://mingwangdianxia.github.io/en/categories/"
@@ -15,9 +15,11 @@
                     hreflang="zh-cn"
                     href="https://mingwangdianxia.github.io/categories/"
                     /></url><url>
-            <loc>https://mingwangdianxia.github.io/tags/java/</loc><lastmod>2022-11-13T20:26:23&#43;08:00</lastmod></url><url>
-            <loc>https://mingwangdianxia.github.io/posts/</loc><lastmod>2022-11-13T20:26:23&#43;08:00</lastmod></url><url>
-            <loc>https://mingwangdianxia.github.io/tags/</loc><lastmod>2022-11-13T20:26:23&#43;08:00</lastmod><xhtml:link
+            <loc>https://mingwangdianxia.github.io/tags/hugo/</loc><lastmod>2022-11-13T22:02:42&#43;08:00</lastmod></url><url>
+            <loc>https://mingwangdianxia.github.io/categories/hugo/</loc><lastmod>2022-11-13T22:02:42&#43;08:00</lastmod></url><url>
+            <loc>https://mingwangdianxia.github.io/posts/hugo_brief/</loc><lastmod>2022-11-13T22:02:42&#43;08:00</lastmod></url><url>
+            <loc>https://mingwangdianxia.github.io/posts/</loc><lastmod>2022-11-13T22:02:42&#43;08:00</lastmod></url><url>
+            <loc>https://mingwangdianxia.github.io/tags/</loc><lastmod>2022-11-13T22:02:42&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://mingwangdianxia.github.io/en/tags/"
@@ -30,7 +32,7 @@
                     hreflang="zh-cn"
                     href="https://mingwangdianxia.github.io/tags/"
                     /></url><url>
-            <loc>https://mingwangdianxia.github.io/</loc><lastmod>2022-11-13T20:26:23&#43;08:00</lastmod><xhtml:link
+            <loc>https://mingwangdianxia.github.io/</loc><lastmod>2022-11-13T22:02:42&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://mingwangdianxia.github.io/en/"
@@ -43,7 +45,8 @@
                     hreflang="zh-cn"
                     href="https://mingwangdianxia.github.io/"
                     /></url><url>
-            <loc>https://mingwangdianxia.github.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/</loc><lastmod>2022-11-13T20:26:23&#43;08:00</lastmod></url><url>
-            <loc>https://mingwangdianxia.github.io/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/</loc><lastmod>2022-11-13T20:26:23&#43;08:00</lastmod></url><url>
+            <loc>https://mingwangdianxia.github.io/tags/java/</loc><lastmod>2022-11-13T20:26:23&#43;08:00</lastmod></url><url>
+            <loc>https://mingwangdianxia.github.io/categories/java/</loc><lastmod>2022-11-13T20:26:23&#43;08:00</lastmod></url><url>
             <loc>https://mingwangdianxia.github.io/posts/java_little/</loc><lastmod>2022-11-13T20:26:23&#43;08:00</lastmod></url><url>
+            <loc>https://mingwangdianxia.github.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/</loc><lastmod>2022-11-13T20:26:23&#43;08:00</lastmod></url><url>
             <loc>https://mingwangdianxia.github.io/friends/</loc></url></urlset>

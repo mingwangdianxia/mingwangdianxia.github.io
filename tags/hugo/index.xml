@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>hugo - 标签 - 聚源亭</title>
+        <link>https://mingwangdianxia.github.io/tags/hugo/</link>
+        <description>hugo - 标签 - 聚源亭</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1665812451@qq.com (明王)</managingEditor>
+            <webMaster>1665812451@qq.com (明王)</webMaster><lastBuildDate>Sun, 13 Nov 2022 22:02:42 &#43;0800</lastBuildDate><atom:link href="https://mingwangdianxia.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo简介</title>
+    <link>https://mingwangdianxia.github.io/posts/hugo_brief/</link>
+    <pubDate>Sun, 13 Nov 2022 22:02:42 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/hugo_brief/</guid>
+    <description><![CDATA[<p>hugo的简单介绍与使用</p>]]></description>
+</item>
+</channel>
+</rss>
