@@ -1,0 +1,10 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Convergence Source pavilion</title>
+        <link>https://mingwangdianxia.github.io/en/</link>
+        <description>汇聚知识、源于知识、亭下观赏</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>1665812451@qq.com (明王)</managingEditor>
+            <webMaster>1665812451@qq.com (明王)</webMaster>
+            <atom:link href="https://mingwangdianxia.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+        </channel>
+</rss>

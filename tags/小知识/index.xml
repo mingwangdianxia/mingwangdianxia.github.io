@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>小知识 - 标签 - 聚源亭</title>
+        <link>https://mingwangdianxia.github.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/</link>
+        <description>小知识 - 标签 - 聚源亭</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1665812451@qq.com (明王)</managingEditor>
+            <webMaster>1665812451@qq.com (明王)</webMaster><lastBuildDate>Sun, 13 Nov 2022 20:26:23 &#43;0800</lastBuildDate><atom:link href="https://mingwangdianxia.github.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" rel="self" type="application/rss+xml" /><item>
+    <title>小知识</title>
+    <link>https://mingwangdianxia.github.io/posts/java_little/</link>
+    <pubDate>Sun, 13 Nov 2022 20:26:23 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/java_little/</guid>
+    <description><![CDATA[<p>汇总java常用的小技巧，小知识</p>]]></description>
+</item>
+</channel>
+</rss>
