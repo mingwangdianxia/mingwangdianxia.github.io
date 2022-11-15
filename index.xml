@@ -40,11 +40,11 @@
 </item>
 <item>
     <title>9、链路追踪</title>
-    <link>https://mingwangdianxia.github.io/posts/9%E9%93%BE%E8%B7%AF%E8%BF%BD%E8%B8%AA/</link>
+    <link>https://mingwangdianxia.github.io/posts/architecture_link/</link>
     <pubDate>Mon, 14 Nov 2022 22:40:08 &#43;0800</pubDate>
     <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/9%E9%93%BE%E8%B7%AF%E8%BF%BD%E8%B8%AA/</guid>
-    <description><![CDATA[]]></description>
+    <guid>https://mingwangdianxia.github.io/posts/architecture_link/</guid>
+    <description><![CDATA[<p>运行时通过某种方式记录下服务之间的调用过程，在通过可视化的 UI 界面帮研发运维人员快速定位到出错点。</p>]]></description>
 </item>
 <item>
     <title>8、系统保护</title>
@@ -56,35 +56,35 @@
 </item>
 <item>
     <title>7、配置中心</title>
-    <link>https://mingwangdianxia.github.io/posts/7%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/</link>
+    <link>https://mingwangdianxia.github.io/posts/architecture_config/</link>
     <pubDate>Mon, 14 Nov 2022 22:19:11 &#43;0800</pubDate>
     <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/7%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/</guid>
-    <description><![CDATA[]]></description>
+    <guid>https://mingwangdianxia.github.io/posts/architecture_config/</guid>
+    <description><![CDATA[<p>集中管理微服务架构中每一个服务实例的配置数据。</p>]]></description>
 </item>
 <item>
     <title>6、网关</title>
-    <link>https://mingwangdianxia.github.io/posts/6%E7%BD%91%E5%85%B3/</link>
+    <link>https://mingwangdianxia.github.io/posts/architecture_gateway/</link>
     <pubDate>Mon, 14 Nov 2022 22:18:14 &#43;0800</pubDate>
     <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/6%E7%BD%91%E5%85%B3/</guid>
-    <description><![CDATA[]]></description>
+    <guid>https://mingwangdianxia.github.io/posts/architecture_gateway/</guid>
+    <description><![CDATA[<p>在用户端与服务之间建立一道屏障 - 网关</p>]]></description>
 </item>
 <item>
     <title>5、消息通信</title>
-    <link>https://mingwangdianxia.github.io/posts/5%E6%B6%88%E6%81%AF%E9%80%9A%E4%BF%A1/</link>
+    <link>https://mingwangdianxia.github.io/posts/architecture_rpc/</link>
     <pubDate>Mon, 14 Nov 2022 22:16:57 &#43;0800</pubDate>
     <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/5%E6%B6%88%E6%81%AF%E9%80%9A%E4%BF%A1/</guid>
-    <description><![CDATA[]]></description>
+    <guid>https://mingwangdianxia.github.io/posts/architecture_rpc/</guid>
+    <description><![CDATA[<p>远程过程调用</p>]]></description>
 </item>
 <item>
     <title>4、负载均衡</title>
-    <link>https://mingwangdianxia.github.io/posts/4%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</link>
+    <link>https://mingwangdianxia.github.io/posts/architecture_balance/</link>
     <pubDate>Mon, 14 Nov 2022 22:16:45 &#43;0800</pubDate>
     <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/4%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</guid>
-    <description><![CDATA[]]></description>
+    <guid>https://mingwangdianxia.github.io/posts/architecture_balance/</guid>
+    <description><![CDATA[<p>通过软件或者硬件措施，将来自客户端的请求按照某种策略平均的分配到集群的每一个节点上</p>]]></description>
 </item>
 </channel>
 </rss>

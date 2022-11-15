@@ -4,34 +4,34 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>10、分布式事务 - 聚源亭</title><meta name="Description" content="汇聚知识、源于知识、亭下观赏"><meta property="og:title" content="10、分布式事务" />
-<meta property="og:description" content="" />
+        <title>6、网关 - 聚源亭</title><meta name="Description" content="汇聚知识、源于知识、亭下观赏"><meta property="og:title" content="6、网关" />
+<meta property="og:description" content="在用户端与服务之间建立一道屏障 - 网关" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mingwangdianxia.github.io/posts/10%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/" /><meta property="og:image" content="https://mingwangdianxia.github.io/img/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-11-14T22:40:38+08:00" />
-<meta property="article:modified_time" content="2022-11-14T22:40:38+08:00" /><meta property="og:site_name" content="聚源亭" />
+<meta property="og:url" content="https://mingwangdianxia.github.io/posts/architecture_gateway/" /><meta property="og:image" content="https://mingwangdianxia.github.io/img/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-14T22:18:14+08:00" />
+<meta property="article:modified_time" content="2022-11-14T22:18:14+08:00" /><meta property="og:site_name" content="聚源亭" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://mingwangdianxia.github.io/img/logo.png"/>
 
-<meta name="twitter:title" content="10、分布式事务"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="6、网关"/>
+<meta name="twitter:description" content="在用户端与服务之间建立一道屏障 - 网关"/>
 <meta name="application-name" content="聚源亭">
 <meta name="apple-mobile-web-app-title" content="聚源亭"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://mingwangdianxia.github.io/posts/10%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/" /><link rel="prev" href="https://mingwangdianxia.github.io/posts/architecture_link/" /><link rel="next" href="https://mingwangdianxia.github.io/posts/11%E5%A4%9A%E7%BA%A7%E7%BC%93%E5%AD%98/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://mingwangdianxia.github.io/posts/architecture_gateway/" /><link rel="prev" href="https://mingwangdianxia.github.io/posts/architecture_rpc/" /><link rel="next" href="https://mingwangdianxia.github.io/posts/architecture_config/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "10、分布式事务",
+        "headline": "6、网关",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/mingwangdianxia.github.io\/posts\/10%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1\/"
-        },"genre": "posts","wordcount":  0 ,
-        "url": "https:\/\/mingwangdianxia.github.io\/posts\/10%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1\/","datePublished": "2022-11-14T22:40:38+08:00","dateModified": "2022-11-14T22:40:38+08:00","publisher": {
+            "@id": "https:\/\/mingwangdianxia.github.io\/posts\/architecture_gateway\/"
+        },"genre": "posts","keywords": "面试","wordcount":  1478 ,
+        "url": "https:\/\/mingwangdianxia.github.io\/posts\/architecture_gateway\/","datePublished": "2022-11-14T22:18:14+08:00","dateModified": "2022-11-14T22:18:14+08:00","publisher": {
             "@type": "Organization",
             "name": "明王"},"author": {
                 "@type": "Person",
@@ -69,7 +69,7 @@
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
                     <i class="fa fa-globe" aria-hidden="true"></i>                      
-                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/10%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/" selected>简体中文</option></select>
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/architecture_gateway/" selected>简体中文</option></select>
                 </a></div>
         </div>
     </div>
@@ -110,7 +110,7 @@
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/posts/10%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/" selected>简体中文</option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/architecture_gateway/" selected>简体中文</option></select>
                 </a></div>
     </div>
 </header><div class="search-dropdown desktop">
@@ -122,17 +122,102 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">10、分布式事务</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>明王</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-14">2022-11-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 0 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 0 分钟&nbsp;</div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">6、网关</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>明王</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%9D%A2%E8%AF%95/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>面试</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-14">2022-11-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1478 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"></div><div class="post-footer" id="post-footer">
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#api网关主流产品">API网关主流产品</a>
+      <ul>
+        <li><a href="#openresty">OpenResty</a></li>
+        <li><a href="#spring-cloud-zuul">Spring Cloud Zuul</a></li>
+        <li><a href="#spring-cloud-gateway">Spring Cloud Gateway</a></li>
+      </ul>
+    </li>
+    <li><a href="#谓词predicate与过滤器filter">谓词（Predicate）与过滤器（Filter）</a></li>
+    <li><a href="#雪崩效应服务限流">雪崩效应、服务限流</a>
+      <ul>
+        <li><a href="#sentinel">Sentinel</a></li>
+        <li><a href="#熔断机制">熔断机制</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>在用户端与服务之间建立一道屏障 - 网关</p>
+<h2 id="api网关主流产品">API网关主流产品</h2>
+<h3 id="openresty">OpenResty</h3>
+<p>OpenResty 是一个强大的 Web 应用服务器，Web 开发人员可以使用 Lua 脚本语言调动 Nginx 支持的各种 C 以及 Lua 模块,更主要的是在性能方面，OpenResty可以快速构造出足以胜任 10K 以上并发连接响应的超高性能 Web 应用系统。</p>
+<h3 id="spring-cloud-zuul">Spring Cloud Zuul</h3>
+<p>Zuul 是 Netflix 开源的微服务网关，它的主要职责是对用户请求进行路由转发与过滤。早期Spring Cloud 与 Netfilx 合作，使用 Zuul 作为微服务架构的首选网关产品。Zuul 是基于 J2EE Servlet 实现路由转发，网络通信采用同步方式，使用简单部署方便。</p>
+<h3 id="spring-cloud-gateway">Spring Cloud Gateway</h3>
+<p>Spring Cloud Gateway 是 Spring 自己开发的新一代 API 网关产品。它基于 NIO 异步处理，摒弃了 Zuul 基于 Servlet 同步通信的设计，因此拥有更好的性能。同时，Spring Cloud Gateway 对配置进行了进一步精简，比 Zuul 更加简单实用。</p>
+<h2 id="谓词predicate与过滤器filter">谓词（Predicate）与过滤器（Filter）</h2>
+<p>路由：是指一个完整的网关地址映射与处理过程。一个完整的路由包含两部分配置：谓词（Predicate）与过滤器（Filter）。</p>
+<p>前端应用发来的请求要被转发到哪个微服务上，是由谓词决定的；</p>
+<p>而转发过程中请求、响应数据被网关如何加工处理是由过滤器决定的。</p>
+<h2 id="雪崩效应服务限流">雪崩效应、服务限流</h2>
+<p>雪崩效应：在微服务项目中指由于突发流量导致某个服务不可用，从而导致上游服务不可用，并产生级联效应，最终导致整个系统不可用</p>
+<p>雪崩效应是因为出现瞬间大流量+微服务响应慢造成的。</p>
+<p>解决方案：</p>
+<ul>
+<li>
+<p>采用限流方式进行预防：可以采用限流方案，控制请求的流入，让流量有序的进入应用，保证流量在一个可控的范围内。</p>
+</li>
+<li>
+<p>采用服务降级与熔断进行补救：针对响应慢问题，可以采用服务降级与熔断进行补救。服务降级是指当应用处理时间超过规定上限后，无论服务是否处理完成，便立即触发服务降级，响应返回预先设置的异常信息。</p>
+</li>
+</ul>
+<h3 id="sentinel">Sentinel</h3>
+<ul>
+<li>
+<p>丰富的应用场景：Sentinel 承接了阿里巴巴近 10 年的双十一大促流量的核心场景，例如秒杀（即突发流量控制在系统容量可以承受的范围）、消息削峰填谷、集群流量控制、实时熔断下游不可用应用等。</p>
+</li>
+<li>
+<p>完备的实时监控：Sentinel 同时提供实时的监控功能。您可以在控制台中看到接入应用的单台机器秒级数据，甚至 500 台以下规模的集群的汇总运行情况。</p>
+</li>
+<li>
+<p>广泛的开源生态：Sentinel 提供开箱即用的与其他开源框架/库的整合模块，例如与 Spring Cloud、Dubbo、gRPC 整合只需要引入相应的依赖并进行简单的配置即可快速地接入 Sentinel。</p>
+</li>
+<li>
+<p>完善的 SPI 扩展点：Sentinel 提供简单易用、完善的 SPI 扩展接口。您可以通过实现扩展接口来快速地定制逻辑。例如定制规则管理、适配动态数据源等。</p>
+</li>
+</ul>
+<h4 id="sentinel-dashboard通信与降级原理">Sentinel Dashboard通信与降级原理</h4>
+<p>Sentinel Dashboard 是Sentinel的控制端，是新的限流与熔断规则的创建者。当内置在微服务内的 Sentinel Core（客户端）接收到新的限流、熔断规则后，微服务便会自动启用的相应的保护措施。
+按执行流程，Sentinel 的执行流程分为三个阶段：</p>
+<p>Sentinel Core 与 Sentinel Dashboard 建立连接；</p>
+<p>Sentinel Dashboard 向 Sentinel Core 下发新的保护规则；</p>
+<p>Sentinel Core 应用新的保护规则，实施限流、熔断等动作。</p>
+<h4 id="sentinel-限流降级的规则配置">Sentinel 限流降级的规则配置</h4>
+<p>滑动窗口算法：</p>
+<p>基于Sentinel Dashboard的限流设置</p>
+<h3 id="熔断机制">熔断机制</h3>
+<p>微服务的熔断是指在某个服务接口在执行过程中频繁出现故障的情况，我们便认为这种状态是“不可接受”的，立即对当前接口实施熔断。</p>
+<ol>
+<li>
+<p>设置熔断的触发条件，当某接口超过20%的请求访问出现故障，便启动熔断；</p>
+</li>
+<li>
+<p>在熔断状态下，若干秒内所有该接口的请求访问都会直接抛出BlockException拒绝访问。</p>
+</li>
+<li>
+<p>熔断器过后，下一次请求重新访问接口，当前接口为“半开状态”，后续处理以下分两种情况。</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>当前请求被有效处理，接口恢复到正常状态。</p>
+</li>
+<li>
+<p>当前请求访问出现故障，接口继续熔断。</p>
+</li>
+</ul></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -147,14 +232,14 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E9%9D%A2%E8%AF%95/">面试</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/architecture_link/" class="prev" rel="prev" title="9、链路追踪"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>9、链路追踪</a>
-            <a href="/posts/11%E5%A4%9A%E7%BA%A7%E7%BC%93%E5%AD%98/" class="next" rel="next" title="11、多级缓存">11、多级缓存<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/posts/architecture_rpc/" class="prev" rel="prev" title="5、消息通信"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>5、消息通信</a>
+            <a href="/posts/architecture_config/" class="next" rel="next" title="7、配置中心">7、配置中心<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
