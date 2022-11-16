@@ -4,87 +4,87 @@
         <link>https://mingwangdianxia.github.io/</link>
         <description>汇聚知识、源于知识、亭下观赏</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1665812451@qq.com (明王)</managingEditor>
-            <webMaster>1665812451@qq.com (明王)</webMaster><lastBuildDate>Mon, 14 Nov 2022 22:42:01 &#43;0800</lastBuildDate>
+            <webMaster>1665812451@qq.com (明王)</webMaster><lastBuildDate>Wed, 16 Nov 2022 21:48:18 &#43;0800</lastBuildDate>
             <atom:link href="https://mingwangdianxia.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>13、服务重构</title>
-    <link>https://mingwangdianxia.github.io/posts/13%E6%9C%8D%E5%8A%A1%E9%87%8D%E6%9E%84/</link>
-    <pubDate>Mon, 14 Nov 2022 22:42:01 &#43;0800</pubDate>
+    <title>14、Netty扩展3</title>
+    <link>https://mingwangdianxia.github.io/posts/14netty%E6%89%A9%E5%B1%953/</link>
+    <pubDate>Wed, 16 Nov 2022 21:48:18 &#43;0800</pubDate>
     <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/13%E6%9C%8D%E5%8A%A1%E9%87%8D%E6%9E%84/</guid>
+    <guid>https://mingwangdianxia.github.io/posts/14netty%E6%89%A9%E5%B1%953/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>12、综合应用</title>
-    <link>https://mingwangdianxia.github.io/posts/12%E7%BB%BC%E5%90%88%E5%BA%94%E7%94%A8/</link>
-    <pubDate>Mon, 14 Nov 2022 22:41:50 &#43;0800</pubDate>
+    <title>13、Netty扩展2</title>
+    <link>https://mingwangdianxia.github.io/posts/13netty%E6%89%A9%E5%B1%952/</link>
+    <pubDate>Wed, 16 Nov 2022 21:48:12 &#43;0800</pubDate>
     <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/12%E7%BB%BC%E5%90%88%E5%BA%94%E7%94%A8/</guid>
+    <guid>https://mingwangdianxia.github.io/posts/13netty%E6%89%A9%E5%B1%952/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>11、多级缓存</title>
-    <link>https://mingwangdianxia.github.io/posts/11%E5%A4%9A%E7%BA%A7%E7%BC%93%E5%AD%98/</link>
-    <pubDate>Mon, 14 Nov 2022 22:41:29 &#43;0800</pubDate>
+    <title>12、Netty扩展1</title>
+    <link>https://mingwangdianxia.github.io/posts/12netty%E6%89%A9%E5%B1%951/</link>
+    <pubDate>Wed, 16 Nov 2022 21:48:06 &#43;0800</pubDate>
     <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/11%E5%A4%9A%E7%BA%A7%E7%BC%93%E5%AD%98/</guid>
+    <guid>https://mingwangdianxia.github.io/posts/12netty%E6%89%A9%E5%B1%951/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>10、分布式事务</title>
-    <link>https://mingwangdianxia.github.io/posts/10%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/</link>
-    <pubDate>Mon, 14 Nov 2022 22:40:38 &#43;0800</pubDate>
+    <title>11、Netty扩展</title>
+    <link>https://mingwangdianxia.github.io/posts/11netty%E6%89%A9%E5%B1%95/</link>
+    <pubDate>Wed, 16 Nov 2022 21:48:01 &#43;0800</pubDate>
     <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/10%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/</guid>
+    <guid>https://mingwangdianxia.github.io/posts/11netty%E6%89%A9%E5%B1%95/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>9、链路追踪</title>
-    <link>https://mingwangdianxia.github.io/posts/architecture_link/</link>
-    <pubDate>Mon, 14 Nov 2022 22:40:08 &#43;0800</pubDate>
+    <title>10、Netty案例3</title>
+    <link>https://mingwangdianxia.github.io/posts/10netty%E6%A1%88%E4%BE%8B3/</link>
+    <pubDate>Wed, 16 Nov 2022 21:47:51 &#43;0800</pubDate>
     <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/architecture_link/</guid>
-    <description><![CDATA[<p>运行时通过某种方式记录下服务之间的调用过程，在通过可视化的 UI 界面帮研发运维人员快速定位到出错点。</p>]]></description>
-</item>
-<item>
-    <title>8、系统保护</title>
-    <link>https://mingwangdianxia.github.io/posts/8%E7%B3%BB%E7%BB%9F%E4%BF%9D%E6%8A%A4/</link>
-    <pubDate>Mon, 14 Nov 2022 22:39:53 &#43;0800</pubDate>
-    <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/8%E7%B3%BB%E7%BB%9F%E4%BF%9D%E6%8A%A4/</guid>
+    <guid>https://mingwangdianxia.github.io/posts/10netty%E6%A1%88%E4%BE%8B3/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>7、配置中心</title>
-    <link>https://mingwangdianxia.github.io/posts/architecture_config/</link>
-    <pubDate>Mon, 14 Nov 2022 22:19:11 &#43;0800</pubDate>
+    <title>9、Netty案例2</title>
+    <link>https://mingwangdianxia.github.io/posts/9netty%E6%A1%88%E4%BE%8B2/</link>
+    <pubDate>Wed, 16 Nov 2022 21:47:43 &#43;0800</pubDate>
     <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/architecture_config/</guid>
-    <description><![CDATA[<p>集中管理微服务架构中每一个服务实例的配置数据。</p>]]></description>
+    <guid>https://mingwangdianxia.github.io/posts/9netty%E6%A1%88%E4%BE%8B2/</guid>
+    <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>6、网关</title>
-    <link>https://mingwangdianxia.github.io/posts/architecture_gateway/</link>
-    <pubDate>Mon, 14 Nov 2022 22:18:14 &#43;0800</pubDate>
+    <title>8、Netty案例</title>
+    <link>https://mingwangdianxia.github.io/posts/8netty%E6%A1%88%E4%BE%8B/</link>
+    <pubDate>Wed, 16 Nov 2022 21:47:34 &#43;0800</pubDate>
     <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/architecture_gateway/</guid>
-    <description><![CDATA[<p>在用户端与服务之间建立一道屏障 - 网关</p>]]></description>
+    <guid>https://mingwangdianxia.github.io/posts/8netty%E6%A1%88%E4%BE%8B/</guid>
+    <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>5、消息通信</title>
-    <link>https://mingwangdianxia.github.io/posts/architecture_rpc/</link>
-    <pubDate>Mon, 14 Nov 2022 22:16:57 &#43;0800</pubDate>
+    <title>7、服务器推送技术</title>
+    <link>https://mingwangdianxia.github.io/posts/7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E9%80%81%E6%8A%80%E6%9C%AF/</link>
+    <pubDate>Wed, 16 Nov 2022 21:47:21 &#43;0800</pubDate>
     <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/architecture_rpc/</guid>
-    <description><![CDATA[<p>远程过程调用</p>]]></description>
+    <guid>https://mingwangdianxia.github.io/posts/7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E9%80%81%E6%8A%80%E6%9C%AF/</guid>
+    <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>4、负载均衡</title>
-    <link>https://mingwangdianxia.github.io/posts/architecture_balance/</link>
-    <pubDate>Mon, 14 Nov 2022 22:16:45 &#43;0800</pubDate>
+    <title>6、序列化</title>
+    <link>https://mingwangdianxia.github.io/posts/6%E5%BA%8F%E5%88%97%E5%8C%96/</link>
+    <pubDate>Wed, 16 Nov 2022 21:47:03 &#43;0800</pubDate>
     <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/architecture_balance/</guid>
-    <description><![CDATA[<p>通过软件或者硬件措施，将来自客户端的请求按照某种策略平均的分配到集群的每一个节点上</p>]]></description>
+    <guid>https://mingwangdianxia.github.io/posts/6%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>5、Netty示例</title>
+    <link>https://mingwangdianxia.github.io/posts/5netty%E7%A4%BA%E4%BE%8B/</link>
+    <pubDate>Wed, 16 Nov 2022 21:45:46 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/5netty%E7%A4%BA%E4%BE%8B/</guid>
+    <description><![CDATA[]]></description>
 </item>
 </channel>
 </rss>

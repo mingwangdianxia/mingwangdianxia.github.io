@@ -4,7 +4,39 @@
         <link>https://mingwangdianxia.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
         <description>面试 - 标签 - 聚源亭</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1665812451@qq.com (明王)</managingEditor>
-            <webMaster>1665812451@qq.com (明王)</webMaster><lastBuildDate>Mon, 14 Nov 2022 22:40:08 &#43;0800</lastBuildDate><atom:link href="https://mingwangdianxia.github.io/tags/%E9%9D%A2%E8%AF%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1665812451@qq.com (明王)</webMaster><lastBuildDate>Mon, 14 Nov 2022 22:42:01 &#43;0800</lastBuildDate><atom:link href="https://mingwangdianxia.github.io/tags/%E9%9D%A2%E8%AF%95/" rel="self" type="application/rss+xml" /><item>
+    <title>13、服务重构</title>
+    <link>https://mingwangdianxia.github.io/posts/architecture/</link>
+    <pubDate>Mon, 14 Nov 2022 22:42:01 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/architecture/</guid>
+    <description><![CDATA[<p>微服务架构建议</p>]]></description>
+</item>
+<item>
+    <title>12、综合应用</title>
+    <link>https://mingwangdianxia.github.io/posts/architecture_application/</link>
+    <pubDate>Mon, 14 Nov 2022 22:41:50 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/architecture_application/</guid>
+    <description><![CDATA[<p>DevOps一种开发人员和运维人员之间的沟通文化</p>]]></description>
+</item>
+<item>
+    <title>11、多级缓存</title>
+    <link>https://mingwangdianxia.github.io/posts/architecture_cache/</link>
+    <pubDate>Mon, 14 Nov 2022 22:41:29 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/architecture_cache/</guid>
+    <description><![CDATA[<p>利用内存的高吞吐瞬间完成数据提取，却又不只利用内存</p>]]></description>
+</item>
+<item>
+    <title>10、分布式事务</title>
+    <link>https://mingwangdianxia.github.io/posts/architecture_affair/</link>
+    <pubDate>Mon, 14 Nov 2022 22:40:38 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/architecture_affair/</guid>
+    <description><![CDATA[<p>保证多个事务要么全部提交，要么全部回滚，以此来保证数据的完整性</p>]]></description>
+</item>
+<item>
     <title>9、链路追踪</title>
     <link>https://mingwangdianxia.github.io/posts/architecture_link/</link>
     <pubDate>Mon, 14 Nov 2022 22:40:08 &#43;0800</pubDate>
@@ -51,22 +83,6 @@
     <author>明王</author>
     <guid>https://mingwangdianxia.github.io/posts/architecture_discovery/</guid>
     <description><![CDATA[<p>对所有服务运行的实例进行统一注册管理、有组织地及逆行健康检查来保障服务地可用性</p>]]></description>
-</item>
-<item>
-    <title>2、生态</title>
-    <link>https://mingwangdianxia.github.io/posts/architecture_ecology/</link>
-    <pubDate>Mon, 14 Nov 2022 22:13:24 &#43;0800</pubDate>
-    <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/architecture_ecology/</guid>
-    <description><![CDATA[<p>微服务架构是一种风格，需要具体的技术来支撑</p>]]></description>
-</item>
-<item>
-    <title>1、架构设计</title>
-    <link>https://mingwangdianxia.github.io/posts/architecture_design/</link>
-    <pubDate>Mon, 14 Nov 2022 20:32:20 &#43;0800</pubDate>
-    <author>明王</author>
-    <guid>https://mingwangdianxia.github.io/posts/architecture_design/</guid>
-    <description><![CDATA[<p>设计架构的目的就是为了解决以往业务中的痛点</p>]]></description>
 </item>
 </channel>
 </rss>

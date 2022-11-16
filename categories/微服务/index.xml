@@ -1,0 +1,40 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>微服务 - 分类 - 聚源亭</title>
+        <link>https://mingwangdianxia.github.io/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</link>
+        <description>微服务 - 分类 - 聚源亭</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1665812451@qq.com (明王)</managingEditor>
+            <webMaster>1665812451@qq.com (明王)</webMaster><lastBuildDate>Mon, 14 Nov 2022 22:42:01 &#43;0800</lastBuildDate><atom:link href="https://mingwangdianxia.github.io/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" rel="self" type="application/rss+xml" /><item>
+    <title>13、服务重构</title>
+    <link>https://mingwangdianxia.github.io/posts/architecture/</link>
+    <pubDate>Mon, 14 Nov 2022 22:42:01 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/architecture/</guid>
+    <description><![CDATA[<p>微服务架构建议</p>]]></description>
+</item>
+<item>
+    <title>12、综合应用</title>
+    <link>https://mingwangdianxia.github.io/posts/architecture_application/</link>
+    <pubDate>Mon, 14 Nov 2022 22:41:50 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/architecture_application/</guid>
+    <description><![CDATA[<p>DevOps一种开发人员和运维人员之间的沟通文化</p>]]></description>
+</item>
+<item>
+    <title>11、多级缓存</title>
+    <link>https://mingwangdianxia.github.io/posts/architecture_cache/</link>
+    <pubDate>Mon, 14 Nov 2022 22:41:29 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/architecture_cache/</guid>
+    <description><![CDATA[<p>利用内存的高吞吐瞬间完成数据提取，却又不只利用内存</p>]]></description>
+</item>
+<item>
+    <title>10、分布式事务</title>
+    <link>https://mingwangdianxia.github.io/posts/architecture_affair/</link>
+    <pubDate>Mon, 14 Nov 2022 22:40:38 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/architecture_affair/</guid>
+    <description><![CDATA[<p>保证多个事务要么全部提交，要么全部回滚，以此来保证数据的完整性</p>]]></description>
+</item>
+</channel>
+</rss>
