@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>系统架构演化 - 聚源亭</title><meta name="Description" content="汇聚知识、源于知识、亭下观赏"><meta property="og:title" content="系统架构演化" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mingwangdianxia.github.io/posts/architecture_evolution/" /><meta property="og:image" content="https://mingwangdianxia.github.io/img/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-14T20:32:20+08:00" />
+<meta property="article:modified_time" content="2022-10-14T20:32:20+08:00" /><meta property="og:site_name" content="聚源亭" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mingwangdianxia.github.io/img/logo.png"/>
+
+<meta name="twitter:title" content="系统架构演化"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="聚源亭">
+<meta name="apple-mobile-web-app-title" content="聚源亭"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://mingwangdianxia.github.io/posts/architecture_evolution/" /><link rel="next" href="https://mingwangdianxia.github.io/posts/java_little/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "系统架构演化",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/mingwangdianxia.github.io\/posts\/architecture_evolution\/"
+        },"genre": "posts","keywords": "小知识","wordcount":  2668 ,
+        "url": "https:\/\/mingwangdianxia.github.io\/posts\/architecture_evolution\/","datePublished": "2022-10-14T20:32:20+08:00","dateModified": "2022-10-14T20:32:20+08:00","publisher": {
+            "@type": "Organization",
+            "name": "明王"},"author": {
+                "@type": "Person",
+                "name": "明王"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="聚源亭"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/logo.png"
+        data-srcset="/img/logo.png, /img/logo.png 1.5x, /img/logo.png 2x"
+        data-sizes="auto"
+        alt="/img/logo.png"
+        title="/img/logo.png" width="1000" height="1000" /></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="文章"> 文章 </a><a class="menu-item" href="/tags/" title="标签"> 标签 </a><a class="menu-item" href="/categories/" title="分类"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/architecture_evolution/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="聚源亭"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/img/logo.png"
+        data-srcset="/img/logo.png, /img/logo.png 1.5x, /img/logo.png 2x"
+        data-sizes="auto"
+        alt="/img/logo.png"
+        title="/img/logo.png" width="1000" height="1000" /></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="文章">文章</a><a class="menu-item" href="/tags/" title="标签">标签</a><a class="menu-item" href="/categories/" title="分类">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/architecture_evolution/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">系统架构演化</h1><h2 class="single-subtitle">不断更新迭代的架构、功能越丰富的系统</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>明王</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>小知识</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-14">2022-10-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2668 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#初始阶段">初始阶段</a></li>
+    <li><a href="#应用服务和数据服务分离">应用服务和数据服务分离</a></li>
+    <li><a href="#缓存-改善系统性能">缓存-改善系统性能</a></li>
+    <li><a href="#集群-改善并发能力">集群-改善并发能力</a></li>
+    <li><a href="#读写分离-减轻负载压力">读写分离-减轻负载压力</a></li>
+    <li><a href="#cdn-加速网站响应">CDN-加速网站响应</a></li>
+    <li><a href="#分布式-满足持续增长的需求">分布式-满足持续增长的需求</a></li>
+    <li><a href="#搜索引擎-复杂的检索需求">搜索引擎-复杂的检索需求</a></li>
+    <li><a href="#业务拆分-低耦合">业务拆分-低耦合</a></li>
+    <li><a href="#微服务">微服务</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><div class="typeit"><div id="id-1"></div></div>
+
+<hr>
+<h2 id="初始阶段">初始阶段</h2>
+<p>大型网站都是从小型网站发展而来，系统架构也是一样，是从小型架构逐步演化而来。小型网站最开始没有太多人访问，只需要一台服务器就绰绰有余</p>
+<p>此时的系统架构如下图所示：</p>
+<figure><a class="lightgallery" href="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%9D%E5%A7%8B%E9%98%B6%E6%AE%B5.png" title="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%9D%E5%A7%8B%E9%98%B6%E6%AE%B5.png" data-thumbnail="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%9D%E5%A7%8B%E9%98%B6%E6%AE%B5.png" data-sub-html="<h2>初始阶段</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%9D%E5%A7%8B%E9%98%B6%E6%AE%B5.png"
+            data-srcset="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%9D%E5%A7%8B%E9%98%B6%E6%AE%B5.png, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%9D%E5%A7%8B%E9%98%B6%E6%AE%B5.png 1.5x, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%9D%E5%A7%8B%E9%98%B6%E6%AE%B5.png 2x"
+            data-sizes="auto"
+            alt="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%9D%E5%A7%8B%E9%98%B6%E6%AE%B5.png" width="606" height="409" />
+    </a><figcaption class="image-caption">初始阶段</figcaption>
+    </figure>
+<p>应用程序、数据库、文件等所有资源都在一台服务器上。随着网站业务的发展，一台服务器逐渐不能满足需求：越来越多的用户访问导致性能越来越差，越来越多的数据导致存储空间不足。这时候就需要对系统进行优化。首先能想到的就是增加资源。</p>
+<hr>
+<h2 id="应用服务和数据服务分离">应用服务和数据服务分离</h2>
+<p>应用和数据分离后整个网站使用3台服务器：应用服务器、文件服务器和数据库服务器。这 3 台服务器对硬件资源的要求各不相同：</p>
+<ul>
+<li>应用服务器需要处理大量的业务逻辑，因此需要更快更强大的CPU；</li>
+<li>数据库服务器需要快速磁盘检索和数据缓存，因此需要更快的磁盘和更大的内存；</li>
+<li>文件服务器需要存储大量用户上传的文件，因此需要更大的硬盘。</li>
+</ul>
+<p>此时的系统架构如下图所示：</p>
+<figure><a class="lightgallery" href="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%92%8C%E6%95%B0%E6%8D%AE%E6%9C%8D%E5%8A%A1%E5%88%86%E7%A6%BB.png" title="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%92%8C%E6%95%B0%E6%8D%AE%E6%9C%8D%E5%8A%A1%E5%88%86%E7%A6%BB.png" data-thumbnail="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%92%8C%E6%95%B0%E6%8D%AE%E6%9C%8D%E5%8A%A1%E5%88%86%E7%A6%BB.png" data-sub-html="<h2>应用服务和数据服务分离</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%92%8C%E6%95%B0%E6%8D%AE%E6%9C%8D%E5%8A%A1%E5%88%86%E7%A6%BB.png"
+            data-srcset="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%92%8C%E6%95%B0%E6%8D%AE%E6%9C%8D%E5%8A%A1%E5%88%86%E7%A6%BB.png, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%92%8C%E6%95%B0%E6%8D%AE%E6%9C%8D%E5%8A%A1%E5%88%86%E7%A6%BB.png 1.5x, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%92%8C%E6%95%B0%E6%8D%AE%E6%9C%8D%E5%8A%A1%E5%88%86%E7%A6%BB.png 2x"
+            data-sizes="auto"
+            alt="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%92%8C%E6%95%B0%E6%8D%AE%E6%9C%8D%E5%8A%A1%E5%88%86%E7%A6%BB.png" width="815" height="582" />
+    </a><figcaption class="image-caption">应用服务和数据服务分离</figcaption>
+    </figure>
+<p>应用和数据分离后，不同特性的服务器承担不同的服务角色，网站的并发处理能力和数据存储空间得到了很大改</p>
+<p>善，支持网站业务进一步发展。但是随着用户逐渐增多，网站又一次面临挑战：数据库压力太大导致访问延迟，进</p>
+<p>而影响整个网站的性能，用户体验受到影响。这时需要对网站架构进一步优化</p>
+<hr>
+<h2 id="缓存-改善系统性能">缓存-改善系统性能</h2>
+<p>网站访问的特点和现实世界的财富分配一样遵循二八定律：80% 的业务访问集中在20% 的数据上。既然大部分业务访问集中在一小部分数据上，那么如果把这一小部分数据缓存在内存中，就可以减少数据库的访问压力，提高整个网站的数据访问速度，改善数据库的写入性能了。 网站使用的缓存可以分为两种：缓存在应用服务器上的本地缓存存和缓存在专门的分布式缓存服务器上的远程缓存。</p>
+<ul>
+<li>本地缓存的访问速度更快一些，但是受应用服务器内存限制，其缓存数据量有限，而且会出现和应用程序争用内存的情况；</li>
+<li>远程分布式缓存可以使用集群的方式，部署大内存的服务器作为专门的缓存服务器，可以在理论上做到不受内存容量限制的缓存服服务。</li>
+</ul>
+<p>此时系统架构图如下所示：</p>
+<figure><a class="lightgallery" href="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E7%BC%93%E5%AD%98_%E6%94%B9%E5%96%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD.png" title="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E7%BC%93%E5%AD%98_%E6%94%B9%E5%96%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD.png" data-thumbnail="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E7%BC%93%E5%AD%98_%E6%94%B9%E5%96%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD.png" data-sub-html="<h2>缓存_改善系统性能</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E7%BC%93%E5%AD%98_%E6%94%B9%E5%96%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD.png"
+            data-srcset="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E7%BC%93%E5%AD%98_%E6%94%B9%E5%96%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD.png, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E7%BC%93%E5%AD%98_%E6%94%B9%E5%96%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD.png 1.5x, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E7%BC%93%E5%AD%98_%E6%94%B9%E5%96%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD.png 2x"
+            data-sizes="auto"
+            alt="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E7%BC%93%E5%AD%98_%E6%94%B9%E5%96%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD.png" width="756" height="718" />
+    </a><figcaption class="image-caption">缓存_改善系统性能</figcaption>
+    </figure>
+<p>使用缓存后，数据访问压力得到有效缓解，但是单一应用服务器能够处理的请求连接有限，在网站访问高峰期，应用服务器又成为整个网站的瓶颈。</p>
+<hr>
+<h2 id="集群-改善并发能力">集群-改善并发能力</h2>
+<p>使用集群是网站解决高并发、海量数据问题的常用手段。当一台服务器的处理能力、存储空间不足时，不要企图去更换更强大的服务器，对大型网站而言，不管多么强大的服务器，都满足不了网站持续增长的业务需求。这种情况下，更恰当的做法是增加一台服务器分担原有服务器的访问及存储压力。 <strong>对网站架构而言，只要能通过增加一台服务器的方式改善负载压力，就可以以同样的方式持续增加服务器不断改善系统性能，从而实现系统的可伸缩性</strong>。应用服务器实现集群是网站可伸缩架构设计中较为简单成熟的一种。</p>
+<p>通过负载均衡调度服务器，可以将来自用户浏览器的访问请求分发到应用服务器集群中的任何一台服务器上，如果有更多用户，就在集群中加入更多的应用服务器，使应用服务器的压力不再成为整个网站的瓶颈。</p>
+<p>此时系统架构图如下所示：</p>
+<figure><a class="lightgallery" href="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E9%9B%86%E7%BE%A4_%E6%94%B9%E5%96%84%E6%80%A7%E8%83%BD.png" title="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E9%9B%86%E7%BE%A4_%E6%94%B9%E5%96%84%E6%80%A7%E8%83%BD.png" data-thumbnail="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E9%9B%86%E7%BE%A4_%E6%94%B9%E5%96%84%E6%80%A7%E8%83%BD.png" data-sub-html="<h2>集群_改善性能</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E9%9B%86%E7%BE%A4_%E6%94%B9%E5%96%84%E6%80%A7%E8%83%BD.png"
+            data-srcset="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E9%9B%86%E7%BE%A4_%E6%94%B9%E5%96%84%E6%80%A7%E8%83%BD.png, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E9%9B%86%E7%BE%A4_%E6%94%B9%E5%96%84%E6%80%A7%E8%83%BD.png 1.5x, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E9%9B%86%E7%BE%A4_%E6%94%B9%E5%96%84%E6%80%A7%E8%83%BD.png 2x"
+            data-sizes="auto"
+            alt="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E9%9B%86%E7%BE%A4_%E6%94%B9%E5%96%84%E6%80%A7%E8%83%BD.png" width="954" height="587" />
+    </a><figcaption class="image-caption">集群_改善性能</figcaption>
+    </figure>
+<p>网站在使用缓存后，使对大部分数据读操作访问都可以不通过数据库就能完成，但是仍有一部分读操作（缓存访问</p>
+<p>不命中、缓存过期）和全部的写操作都需要访问数据库，在网站的用户达到一定规模后，数据库因为负载压力过高</p>
+<p>而成为网站的瓶颈。</p>
+<hr>
+<h2 id="读写分离-减轻负载压力">读写分离-减轻负载压力</h2>
+<p>目前大部分的主流数据库都提供主从热备功能，通过配置两台数据库主从关系，可以将一台数据库服务器的数据更新同步到另一台服务器上。网站利用数据库的这一功能，实现数据库读写分离，从而改善数据库负载压力。</p>
+<p>应用服务器在写数据的时候，访问主数据库，主数据库通过主从复制机制将数据更新同步到从数据库，这样当应用服务器读数据的时候，就可以通过从数据库获得数据。为了便于应用程序访问读写分离后的数据库，通常在应用服务器端使用专门的数据访问模块，使数据库读写分离对应用透明。</p>
+<p>系统架构如下图所示：</p>
+<figure><a class="lightgallery" href="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB_%E5%87%8F%E8%BD%BB%E8%B4%9F%E8%BD%BD%E5%8E%8B%E5%8A%9B.png" title="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB_%E5%87%8F%E8%BD%BB%E8%B4%9F%E8%BD%BD%E5%8E%8B%E5%8A%9B.png" data-thumbnail="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB_%E5%87%8F%E8%BD%BB%E8%B4%9F%E8%BD%BD%E5%8E%8B%E5%8A%9B.png" data-sub-html="<h2>读写分离_减轻负载压力</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB_%E5%87%8F%E8%BD%BB%E8%B4%9F%E8%BD%BD%E5%8E%8B%E5%8A%9B.png"
+            data-srcset="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB_%E5%87%8F%E8%BD%BB%E8%B4%9F%E8%BD%BD%E5%8E%8B%E5%8A%9B.png, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB_%E5%87%8F%E8%BD%BB%E8%B4%9F%E8%BD%BD%E5%8E%8B%E5%8A%9B.png 1.5x, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB_%E5%87%8F%E8%BD%BB%E8%B4%9F%E8%BD%BD%E5%8E%8B%E5%8A%9B.png 2x"
+            data-sizes="auto"
+            alt="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB_%E5%87%8F%E8%BD%BB%E8%B4%9F%E8%BD%BD%E5%8E%8B%E5%8A%9B.png" width="954" height="722" />
+    </a><figcaption class="image-caption">读写分离_减轻负载压力</figcaption>
+    </figure>
+<p>来自不同地区的用户以不同的网络环境去访问系统、访问速度又成为了瓶颈</p>
+<hr>
+<h2 id="cdn-加速网站响应">CDN-加速网站响应</h2>
+<p>有研究表明，网站访问延迟和用户流失率正相关，网站访问越慢，用户越容易失去耐心而离开。为了提供更好的用户体验，留住用户，网站需要加速网站访问速度。主要手段有使用 CDN 和方向代理。</p>
+<p>系统架构如下图所示：</p>
+<figure><a class="lightgallery" href="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/cdn_%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE.png" title="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/cdn_%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE.png" data-thumbnail="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/cdn_%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE.png" data-sub-html="<h2>cdn_加速访问</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/cdn_%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE.png"
+            data-srcset="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/cdn_%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE.png, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/cdn_%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE.png 1.5x, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/cdn_%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE.png 2x"
+            data-sizes="auto"
+            alt="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/cdn_%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE.png" width="952" height="670" />
+    </a><figcaption class="image-caption">cdn_加速访问</figcaption>
+    </figure>
+<ul>
+<li>CDN 部署在网络提供商的机房，使用户在请求网站服务时，可以从距离自己最近的网络提供商机房获取数据</li>
+<li>反向代理则部署在网站的中心机房，当用户请求到达中心机房后，首先访问的服务器是反向代理服务器，如果反向代理服务器中缓存着用户请求的资源，就将其直接返回给用户</li>
+</ul>
+<hr>
+<h2 id="分布式-满足持续增长的需求">分布式-满足持续增长的需求</h2>
+<p>任何强大的单一服务器都满足不了大型网站持续增长的业务需求。数据库经过读写分离后，从一台服务器拆分成两台服务器，但是随着网站业务的发展依然不能满足需求，这时需要使用分布式数据库。文件系统也一样，需要使用分布式文件系统</p>
+<p>系统架构如下图所示：</p>
+<figure><a class="lightgallery" href="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%86%E5%B8%83%E5%BC%8F_%E6%8C%81%E7%BB%AD%E5%A2%9E%E9%95%BF.png" title="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%86%E5%B8%83%E5%BC%8F_%E6%8C%81%E7%BB%AD%E5%A2%9E%E9%95%BF.png" data-thumbnail="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%86%E5%B8%83%E5%BC%8F_%E6%8C%81%E7%BB%AD%E5%A2%9E%E9%95%BF.png" data-sub-html="<h2>分布式_持续增长</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%86%E5%B8%83%E5%BC%8F_%E6%8C%81%E7%BB%AD%E5%A2%9E%E9%95%BF.png"
+            data-srcset="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%86%E5%B8%83%E5%BC%8F_%E6%8C%81%E7%BB%AD%E5%A2%9E%E9%95%BF.png, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%86%E5%B8%83%E5%BC%8F_%E6%8C%81%E7%BB%AD%E5%A2%9E%E9%95%BF.png 1.5x, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%86%E5%B8%83%E5%BC%8F_%E6%8C%81%E7%BB%AD%E5%A2%9E%E9%95%BF.png 2x"
+            data-sizes="auto"
+            alt="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%88%86%E5%B8%83%E5%BC%8F_%E6%8C%81%E7%BB%AD%E5%A2%9E%E9%95%BF.png" width="1192" height="747" />
+    </a><figcaption class="image-caption">分布式_持续增长</figcaption>
+    </figure>
+<p>分布式数据库是网站数据库拆分的最后手段，只有在单表数据规模非常庞大的时候才使用。不到不得已时，网站更常用的数据库拆分手段是业务分库，将不同业务的数据部署在不同的物理服务器上。</p>
+<hr>
+<h2 id="搜索引擎-复杂的检索需求">搜索引擎-复杂的检索需求</h2>
+<p>随着网站业务越来越复杂，对数据存储和检索的需求也越来越复杂，网站需要采用一些非关系数据库技术如NoSQL 和非数据库查询技术如搜索引擎。</p>
+<p>系统架构如下图所示：</p>
+<figure><a class="lightgallery" href="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E_%E6%A3%80%E7%B4%A2%E9%9C%80%E6%B1%82.png" title="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E_%E6%A3%80%E7%B4%A2%E9%9C%80%E6%B1%82.png" data-thumbnail="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E_%E6%A3%80%E7%B4%A2%E9%9C%80%E6%B1%82.png" data-sub-html="<h2>搜索引擎_检索需求</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E_%E6%A3%80%E7%B4%A2%E9%9C%80%E6%B1%82.png"
+            data-srcset="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E_%E6%A3%80%E7%B4%A2%E9%9C%80%E6%B1%82.png, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E_%E6%A3%80%E7%B4%A2%E9%9C%80%E6%B1%82.png 1.5x, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E_%E6%A3%80%E7%B4%A2%E9%9C%80%E6%B1%82.png 2x"
+            data-sizes="auto"
+            alt="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E_%E6%A3%80%E7%B4%A2%E9%9C%80%E6%B1%82.png" width="1195" height="745" />
+    </a><figcaption class="image-caption">搜索引擎_检索需求</figcaption>
+    </figure>
+<hr>
+<h2 id="业务拆分-低耦合">业务拆分-低耦合</h2>
+<p>将一个网站拆分成许多不同的应用，每个应用独立部署。应用之间可以通过一个超链接建立关系（在首页上的导航链接每个都指向不同的应用地址），也可以通过消息队列进行数据分发，当然最多的还是通过访问同一个数据存储系统来构成一个关联的完整系统</p>
+<p>系统架构如下图所示：</p>
+<figure><a class="lightgallery" href="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E4%B8%9A%E5%8A%A1%E6%8B%86%E5%88%86.png" title="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E4%B8%9A%E5%8A%A1%E6%8B%86%E5%88%86.png" data-thumbnail="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E4%B8%9A%E5%8A%A1%E6%8B%86%E5%88%86.png" data-sub-html="<h2>业务拆分</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E4%B8%9A%E5%8A%A1%E6%8B%86%E5%88%86.png"
+            data-srcset="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E4%B8%9A%E5%8A%A1%E6%8B%86%E5%88%86.png, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E4%B8%9A%E5%8A%A1%E6%8B%86%E5%88%86.png 1.5x, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E4%B8%9A%E5%8A%A1%E6%8B%86%E5%88%86.png 2x"
+            data-sizes="auto"
+            alt="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E4%B8%9A%E5%8A%A1%E6%8B%86%E5%88%86.png" width="1191" height="727" />
+    </a><figcaption class="image-caption">业务拆分</figcaption>
+    </figure>
+<hr>
+<h2 id="微服务">微服务</h2>
+<p>随着业务拆分越来越小，存储系统越来越庞大，应用系统的整体复杂度呈指数级增加，部署维护越来越困难。由于所有应用要和所有数据库系统连接，在数万台服务器规模的网站中，这些连接的数目是服务器规模的平方，导致数据库连接资源不足，拒绝服务。</p>
+<p>既然每一个应用系统都需要执行许多相同的业务操作，比如用户管理、商品管理等，那么可以将这些共用的业务提取出来，独立部署。由这些可复用的业务连接数据库，提供共用业务服务，而应用系统只需要管理用户界面，通过分布式服务调用共用业务服务完成具体业务操作</p>
+<p>系统架构如下图所示：</p>
+<figure><a class="lightgallery" href="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BE%AE%E6%9C%8D%E5%8A%A1.png" title="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BE%AE%E6%9C%8D%E5%8A%A1.png" data-thumbnail="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BE%AE%E6%9C%8D%E5%8A%A1.png" data-sub-html="<h2>微服务</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BE%AE%E6%9C%8D%E5%8A%A1.png"
+            data-srcset="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BE%AE%E6%9C%8D%E5%8A%A1.png, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BE%AE%E6%9C%8D%E5%8A%A1.png 1.5x, /content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BE%AE%E6%9C%8D%E5%8A%A1.png 2x"
+            data-sizes="auto"
+            alt="/content/img/%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/%E5%BE%AE%E6%9C%8D%E5%8A%A1.png" width="1190" height="615" />
+    </a><figcaption class="image-caption">微服务</figcaption>
+    </figure>
+<hr>
+<p>至此，系统架构的历史阐述完毕，当前架构仍然会遇到各种问题，系统还会继续演化。同时云原生、物联网等等技术的不断成熟，对应的解决方案也会形成</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-10-14</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/">小知识</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/posts/java_little/" class="next" rel="next" title="JAVA小知识">JAVA小知识<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+
+
+
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">明王</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"data":{"id-1":"不断更新系统架构的目的是：\u003ccode\u003e为了解决以往业务中的痛点\u003c/code\u003e"},"lightgallery":true,"search":{"highlightTag":"em","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script><script type="text/javascript" src="/js/custom.js"></script></body>
+</html>

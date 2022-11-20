@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/mingwangdianxia.github.io\/posts\/architecture_ecology\/"
-        },"genre": "posts","keywords": "面试","wordcount":  317 ,
+        },"genre": "posts","keywords": "面试","wordcount":  2891 ,
         "url": "https:\/\/mingwangdianxia.github.io\/posts\/architecture_ecology\/","datePublished": "2022-11-14T22:13:24+08:00","dateModified": "2022-11-14T22:13:24+08:00","publisher": {
             "@type": "Organization",
             "name": "明王"},"author": {
@@ -124,8 +124,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">2、生态</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>明王</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%9D%A2%E8%AF%95/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>面试</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-14">2022-11-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 317 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-14">2022-11-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2891 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -140,10 +140,28 @@
         <li><a href="#spring-cloud-alibaba">Spring Cloud Alibaba</a></li>
       </ul>
     </li>
+    <li><a href="#常用中间件">常用中间件</a>
+      <ul>
+        <li><a href="#缓存">缓存</a></li>
+        <li><a href="#消息队列">消息队列</a></li>
+        <li><a href="#搜索引擎">搜索引擎</a></li>
+        <li><a href="#数据库">数据库</a></li>
+      </ul>
+    </li>
+    <li><a href="#负载均衡">负载均衡</a></li>
+    <li><a href="#限流算法">限流算法</a></li>
+    <li><a href="#分布式">分布式</a>
+      <ul>
+        <li><a href="#分布式事务">分布式事务</a></li>
+        <li><a href="#分布式锁">分布式锁</a></li>
+        <li><a href="#分布式-1">分布式</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>微服务架构是一种风格，需要具体的技术来支撑</p>
 <h2 id="微服务的生态">微服务的生态</h2>
+<p>微服务不是基于特定的哪个语言，而是一种设计思想，微服务架构由多个组件组成，对应的组件有非常多的产品可以选择，这些产品的功能类似，也有各自的特点。</p>
 <h3 id="通用的微服务架构应包含的组件">通用的微服务架构应包含的组件</h3>
 <ul>
 <li>注册中心</li>
@@ -158,7 +176,7 @@
 <h3 id="spring-cloud">Spring Cloud</h3>
 <ul>
 <li>注册中心：Eureka</li>
-<li>复杂均衡：Ribbon</li>
+<li>负载均衡：Ribbon</li>
 <li>服务通信：Feign</li>
 <li>Api服务网关：Zuul</li>
 <li>配置中心：Spring Cloud Config</li>
@@ -169,7 +187,7 @@
 <h3 id="spring-cloud-alibaba">Spring Cloud Alibaba</h3>
 <ul>
 <li>注册中心：Nacos</li>
-<li>复杂均衡：Nacos</li>
+<li>负载均衡：Nacos</li>
 <li>服务通信：Feign</li>
 <li>Api服务网关：Gateway</li>
 <li>配置中心：Nacos</li>
@@ -180,7 +198,157 @@
 <li>分布式事务：Seata</li>
 <li>任务调度：SchedulerX</li>
 <li>分布式存储：OSS</li>
-</ul></div><div class="post-footer" id="post-footer">
+</ul>
+<h2 id="常用中间件">常用中间件</h2>
+<h3 id="缓存">缓存</h3>
+<p>在碰到需要执行耗时特别久，且结果不频繁变动的SQL，就特别适合将运行结果放入缓存。这样，后面的请求就去缓存中读取，使得请求能够<strong>迅速响应</strong>。因为在大并发的情况下，所有的请求直接访问数据库，数据库会出现连接异常。这个时候，就需要缓冲操作，让请求先访问到缓存，而不是直接访问数据库。</p>
+<p>常用缓存中间件：Redis</p>
+<p>Redis基于内存运行并支持持久化的NoSQL数据库，优点</p>
+<ul>
+<li>
+<p>Redis支持数据的持久化，可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用</p>
+</li>
+<li>
+<p>Redis不仅仅支持简单的key-value类型的数据，同时还提供list，set，zset，hash等数据结构的存储</p>
+</li>
+<li>
+<p>Redis支持数据的备份，即master-slave模式的数据备份</p>
+</li>
+</ul>
+<p>redis快的原因：</p>
+<ul>
+<li>纯内存操作</li>
+<li>单线程操作</li>
+<li>采用了非阻塞的I/O多路复用机制</li>
+</ul>
+<h4 id="数据类型">数据类型</h4>
+<p>String、hash、list、set、sorted set</p>
+<h4 id="过期策略和内存淘汰机制">过期策略和内存淘汰机制</h4>
+<p>redis采用定期删除+惰性删除策略，</p>
+<p>定期删除：redis默认每个100ms检查，是否有过期的key，有则删除，而且并不是检查所有的key，而是随机抽取进行检查</p>
+<p>惰性删除：在获取某个key时，redis会检查以下，如果过期了就会先删除</p>
+<p>内存淘汰机制</p>
+<p>在redis.conf中有一行配置</p>
+<pre tabindex="0"><code># maxmemory-policy volatile-lru
+</code></pre><ul>
+<li>noeviction：当内存不足以容纳新写入数据时，新写入操作会报错</li>
+<li>allkeys-lru：当内存不足以容纳新写入数据时，在键空间中，移除最近最少使用的key</li>
+<li>allkeys-random：当内存不足以容纳新写入数据时，在键空间中，随机移除某个key</li>
+<li>volatile-lru：当内存不足以容纳新写入数据时，在设置了过期时间的键空间中，移除最近最少使用的key</li>
+<li>volatile-random：当内存不足以容纳新写入数据时，在设置了过期时间的键空间中，随机移除某个key</li>
+<li>volatile-ttl：当内存不足以容纳新写入数据时，在设置了过期时间的键空间中，有更早过期时间的key优先移除</li>
+</ul>
+<h4 id="渐进式rehash">渐进式ReHash</h4>
+<p>整个rehash过程并不是一步完成的，而是分多次、渐进式的完成。如果哈希表中保存着数量巨大的键值对时，若一次进行rehash，很有可能会导致服务器宕机。</p>
+<p>步骤：</p>
+<ul>
+<li>
+<p>为ht[1]分配空间，让字典同时持有ht[0]和ht[1]两个哈希表</p>
+</li>
+<li>
+<p>维持索引计数器变量rehashidx，并将它的值设置为0，表示rehash开始</p>
+</li>
+<li>
+<p>每次对字典执行增删改查时，将ht[0]的rehashidx索引上的所有键值对rehash到ht[1]，将rehashidx值+1。</p>
+</li>
+<li>
+<p>当ht[0]的所有键值对都被rehash到ht[1]中，程序将rehashidx的值设置为-1，表示rehash操作完成</p>
+</li>
+</ul>
+<p>渐进式rehash的好处在于它采取分为而治的方式，将rehash键值对的计算均摊到每个字典增删改查操作，避免了集中式rehash的庞大计算量。</p>
+<h4 id="缓存穿透">缓存穿透</h4>
+<p>访问一个不存在的key，缓存不起作用，请求会穿透到DB，流量大时DB会挂掉</p>
+<p>解决方案：</p>
+<ul>
+<li>采用布隆过滤器，使用一个足够大的bitmap，用于存储可能访问的key，不存在的key直接被过滤掉</li>
+<li>访问key未在DB查询到值，也将空值写进缓存，但可以设置较短的过期时间</li>
+</ul>
+<h4 id="缓存雪崩">缓存雪崩</h4>
+<p>大量的key设置了相同的过期时间，导致缓存在同一时刻全部失效，造成DB瞬时DB请求量大，压力骤增，引起雪崩</p>
+<p>解决方案：</p>
+<ul>
+<li>可以给缓存设置过期时间时附加上一个随机事件，使得每个key的过期事件分布开来，不会在同一时刻失效</li>
+<li>采用限流算法，限制流量</li>
+<li>采用分布式锁，加锁访问</li>
+</ul>
+<hr>
+<h3 id="消息队列">消息队列</h3>
+<p>消息队列中间件是分布式系统中重要的组件，主要解决应用耦合，异步消息，流量削锋等问题实现高性能，高可用，可伸缩和最终一致性架构</p>
+<p>常用消息队列：ActiveMQ，RabbitMQ，ZeroMQ，Kafka，MetaMQ，RocketMQ</p>
+<h4 id="消息队列应用场景">消息队列应用场景</h4>
+<ul>
+<li>异步处理</li>
+<li>应用解耦</li>
+<li>流量削峰</li>
+<li>日志处理</li>
+<li>消息通讯</li>
+</ul>
+<h4 id="jms">JMS</h4>
+<p>java消息服务，是一个消息服务的标准/规范，允许应用程序组件基于JavaEE平台创建、发送、接收和读取消息。它使分布式通信耦合度更低，消息服务更加可靠以及异步性</p>
+<p>消息模型：<code>P2P</code>（点对点）、<code>pub/sub</code>（发布订阅）</p>
+<p><code>P2P</code>模式包含三个角色：消息队列（Queue），发送者(Sender)，接收者(Receiver)。每个消息都被发送到一个特定的队列，接收者从队列中获取消息。队列保留着消息，直到他们被消费或超时。</p>
+<p>P2P的特点：</p>
+<ul>
+<li>
+<p>每个消息只有一个消费者（Consumer）(即一旦被消费，消息就不再在消息队列中)</p>
+</li>
+<li>
+<p>发送者和接收者之间在时间上没有依赖性，也就是说当发送者发送了消息之后，不管接收者有没有正在运行，它不会影响到消息被发送到队列</p>
+</li>
+<li>
+<p>接收者在成功接收消息之后需向队列应答成功</p>
+</li>
+</ul>
+<p><code>Pub/sub</code>模式包含三个角色主题（Topic），发布者（Publisher），订阅者（Subscriber） 多个发布者将消息发送到Topic,系统将这些消息传递给多个订阅者</p>
+<p>Pub/Sub的特点</p>
+<ul>
+<li>每个消息可以有多个消费者</li>
+<li>发布者和订阅者之间有时间上的依赖性。针对某个主题（Topic）的订阅者，它必须创建一个订阅者之后，才能消费发布者的消息</li>
+<li>为了消费消息，订阅者必须保持运行的状态</li>
+</ul>
+<h4 id="防止消息丢失">防止消息丢失</h4>
+<p>由于网络问题，我们很难保证生产者发送的消息能100%到达消息队列服务器，也就是说有消息丢失的可能性，因此，生产者就必须具有消息丢失检测和重发机制，也就是我们常说的消息队列的事物机制</p>
+<p>不能把可靠性的保证全部交给TCP，TCP只保证了传输层的可靠传输，但是无法保证与应用层的交互是否出错TCP无法给应用层任何反馈，因此必须在应用层处理差错</p>
+<ul>
+<li>
+<p>同步等待：每发送完一组数据之后，等待对方确认并且收到确认后，再发送下一组数据</p>
+</li>
+<li>
+<p>连续ARQ：类似滑动窗口模型，</p>
+</li>
+<li>
+<p>回调机制：生产者发送消息的时候，注册一个回调函数，等待消费者告知发送是否成功</p>
+</li>
+</ul>
+<h4 id="冥等处理">冥等处理</h4>
+<p>由于网络原因，生产者可能会重复发送消息，因此消费者方必须做消息的幂等处理</p>
+<ul>
+<li>
+<p>唯一索引：</p>
+</li>
+<li>
+<p>token机制：</p>
+</li>
+<li>
+<p>悲观锁：</p>
+</li>
+<li>
+<p>乐观锁：</p>
+</li>
+<li>
+<p>分布式锁：</p>
+</li>
+</ul>
+<h4 id="按序处理">按序处理</h4>
+<p>默认都不保证消息的严格有序消费，</p>
+<h3 id="搜索引擎">搜索引擎</h3>
+<h3 id="数据库">数据库</h3>
+<h2 id="负载均衡">负载均衡</h2>
+<h2 id="限流算法">限流算法</h2>
+<h2 id="分布式">分布式</h2>
+<h3 id="分布式事务">分布式事务</h3>
+<h3 id="分布式锁">分布式锁</h3>
+<h3 id="分布式-1">分布式</h3></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

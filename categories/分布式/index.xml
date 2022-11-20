@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>分布式 - 分类 - 聚源亭</title>
+        <link>https://mingwangdianxia.github.io/categories/%E5%88%86%E5%B8%83%E5%BC%8F/</link>
+        <description>分布式 - 分类 - 聚源亭</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1665812451@qq.com (明王)</managingEditor>
+            <webMaster>1665812451@qq.com (明王)</webMaster><lastBuildDate>Mon, 14 Nov 2022 20:32:20 &#43;0800</lastBuildDate><atom:link href="https://mingwangdianxia.github.io/categories/%E5%88%86%E5%B8%83%E5%BC%8F/" rel="self" type="application/rss+xml" /><item>
+    <title>1、架构设计</title>
+    <link>https://mingwangdianxia.github.io/posts/architecture_design/</link>
+    <pubDate>Mon, 14 Nov 2022 20:32:20 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/architecture_design/</guid>
+    <description><![CDATA[<div class="typeit"><div id="id-1"></div></div>]]></description>
+</item>
+</channel>
+</rss>
