@@ -37,12 +37,28 @@
     <description><![CDATA[<p>保证多个事务要么全部提交，要么全部回滚，以此来保证数据的完整性</p>]]></description>
 </item>
 <item>
+    <title>8、系统保护</title>
+    <link>https://mingwangdianxia.github.io/posts/architecture_protect/</link>
+    <pubDate>Mon, 14 Nov 2022 22:39:53 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/architecture_protect/</guid>
+    <description><![CDATA[<p>微服务的系统保护</p>]]></description>
+</item>
+<item>
     <title>3、注册中心</title>
     <link>https://mingwangdianxia.github.io/posts/architecture_discovery/</link>
     <pubDate>Mon, 14 Nov 2022 22:16:23 &#43;0800</pubDate>
     <author>明王</author>
     <guid>https://mingwangdianxia.github.io/posts/architecture_discovery/</guid>
     <description><![CDATA[<div class="typeit"><div id="id-1"></div></div>]]></description>
+</item>
+<item>
+    <title>2、生态</title>
+    <link>https://mingwangdianxia.github.io/posts/architecture_ecology/</link>
+    <pubDate>Mon, 14 Nov 2022 22:13:24 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/architecture_ecology/</guid>
+    <description><![CDATA[<p>微服务架构是一种风格，需要具体的技术来支撑</p>]]></description>
 </item>
 <item>
     <title>1、架构设计</title>
