@@ -1,0 +1,48 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Spring - 标签 - 聚源亭</title>
+        <link>https://mingwangdianxia.github.io/tags/spring/</link>
+        <description>Spring - 标签 - 聚源亭</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1665812451@qq.com (明王)</managingEditor>
+            <webMaster>1665812451@qq.com (明王)</webMaster><lastBuildDate>Sun, 27 Nov 2022 20:31:21 &#43;0800</lastBuildDate><atom:link href="https://mingwangdianxia.github.io/tags/spring/" rel="self" type="application/rss+xml" /><item>
+    <title>IOC</title>
+    <link>https://mingwangdianxia.github.io/posts/spring_ioc/</link>
+    <pubDate>Sun, 27 Nov 2022 20:31:21 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/spring_ioc/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>面试</title>
+    <link>https://mingwangdianxia.github.io/posts/spring_interview/</link>
+    <pubDate>Sun, 27 Nov 2022 12:40:22 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/spring_interview/</guid>
+    <description><![CDATA[<p>记录Spring的一些面试题</p>]]></description>
+</item>
+<item>
+    <title>3、核心知识</title>
+    <link>https://mingwangdianxia.github.io/posts/spring_core/</link>
+    <pubDate>Sat, 26 Nov 2022 13:49:29 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/spring_core/</guid>
+    <description><![CDATA[<p>Spring知识</p>]]></description>
+</item>
+<item>
+    <title>2、知识脉络</title>
+    <link>https://mingwangdianxia.github.io/posts/spring_atlas/</link>
+    <pubDate>Sat, 26 Nov 2022 13:48:57 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/spring_atlas/</guid>
+    <description><![CDATA[<div class="typeit"><div id="id-1"></div></div>]]></description>
+</item>
+<item>
+    <title>1、简介</title>
+    <link>https://mingwangdianxia.github.io/posts/spring_brief/</link>
+    <pubDate>Sat, 26 Nov 2022 13:43:07 &#43;0800</pubDate>
+    <author>明王</author>
+    <guid>https://mingwangdianxia.github.io/posts/spring_brief/</guid>
+    <description><![CDATA[<div class="typeit"><div id="id-1"></div></div>]]></description>
+</item>
+</channel>
+</rss>
